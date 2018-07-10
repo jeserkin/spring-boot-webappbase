@@ -3,9 +3,16 @@ This project is intended to cover few most popular ways _(authors opinion)_ on h
 approaches and technologies.
 
 ## Project contents
+Technologies used in general:
+- Spring Boot
+- H2
+- JPA
+- Gradle
+
+---
+
 - [Basic rest application](https://github.com/jeserkin/spring-boot-webappbase/tree/base)
-  - Used technologies:
-    - Spring Boot
-    - H2
-    - JPA
-    - Gradle
+
+- [Application with Thymeleaf support](https://github.com/jeserkin/spring-boot-webappbase/tree/thymeleaf)
+  - Technologies used in addition to general list:
+    - Thymeleaf
