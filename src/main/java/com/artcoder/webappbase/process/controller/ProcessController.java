@@ -5,14 +5,12 @@ import com.artcoder.webappbase.process.service.ProcessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@RestController(value = ProcessController.BASE_URL)
+@RestController
+@RequestMapping(ProcessController.BASE_URL)
 public class ProcessController {
 
   static final String BASE_URL = "/process";
