@@ -27,6 +27,11 @@ public class ProcessController {
     return processService.findProcesses();
   }
 
+  @GetMapping(value = "/{processId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  public ResponseEntity<Process> getProcess(@PathVariable Long processId) {
+    return ResponseEntity.ok(processService.getProcess(processId));
+  }
+
   @PutMapping(value = "/{processId}/mark-complete")
   public ResponseEntity<Void> markComplete(@PathVariable Long processId) {
     processService.markComplete(processId);

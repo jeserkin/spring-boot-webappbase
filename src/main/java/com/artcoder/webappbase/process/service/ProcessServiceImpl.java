@@ -30,6 +30,12 @@ public class ProcessServiceImpl implements ProcessService {
       process.setStatus(1);
       processRepository.save(process);
     });
-    byId.orElseThrow(() -> new RuntimeException("Process not found!"));
+    byId.orElseThrow(() -> new RuntimeException("No processes found!"));
+  }
+
+  @Override
+  public Process getProcess(long processId) {
+    return processRepository.findById(processId)
+      .orElseThrow(() -> new RuntimeException("Process not found!"));
   }
 }

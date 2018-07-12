@@ -16,3 +16,9 @@ Technologies used in general:
 - [Application with Thymeleaf support](https://github.com/jeserkin/spring-boot-webappbase/tree/thymeleaf)
   - Technologies used in addition to general list:
     - Thymeleaf
+    
+- [Application with Thymeleaf and Rest support](https://github.com/jeserkin/spring-boot-webappbase/tree/thymeleaf-rest)
+  - Technologies used in addition to general list:
+    - Thymeleaf
+  - Approach used:
+    - Async requests for data, to lessen the initial response payload from server

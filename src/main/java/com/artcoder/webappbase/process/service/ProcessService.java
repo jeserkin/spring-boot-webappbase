@@ -7,4 +7,5 @@ import java.util.Collection;
 public interface ProcessService {
   Collection<Process> findProcesses();
   void markComplete(long processId);
+  Process getProcess(long processId);
 }
