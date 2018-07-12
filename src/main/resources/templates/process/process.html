@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Process</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+  <div>
+    <span>ID:</span>
+    <span id="process-id"></span>
+  </div>
+  <div>
+    <span>Process name:</span>
+    <span id="process-name"></span>
+  </div>
+  <div>
+    <span>Timestamp:</span>
+    <span id="process-timestamp"></span>
+  </div>
+  <div>
+    <span>Status:</span>
+    <span id="process-status"></span>
+  </div>
+  <div>
+    <a href="/thymeleaf/process/list"><< Back</a>
+  </div>
+
+  <script th:src="@{/resources/process/process.js}"></script>
+  <script th:inline="javascript">
+    const fillOutProcess = process => {
+      document.getElementById('process-id')
+        .appendChild(document.createTextNode(process.id));
+      document.getElementById('process-name')
+        .appendChild(document.createTextNode(process.processName));
+      document.getElementById('process-timestamp')
+        .appendChild(document.createTextNode(new Date(process.timestamp).toLocaleDateString('et-EE', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric'
+        })));
+      document.getElementById('process-status')
+        .appendChild(document.createTextNode(process.status === 1 ? 'Enabled' : 'Disabled'));
+    };
+    const processId = /*[[${processId}]]*/ 0;
+    loadProcess(processId)
+      .then(fillOutProcess);
+  </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.artcoder.webappbase;
+package com.artcoder.webappbase.config;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
