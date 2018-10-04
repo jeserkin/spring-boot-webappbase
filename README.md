@@ -13,6 +13,10 @@ Technologies used in general:
 
 - [Basic rest application](https://github.com/jeserkin/spring-boot-webappbase/tree/base)
 
+- [Basic rest application with PostgreSQL](https://github.com/jeserkin/spring-boot-webappbase/tree/base-postgres)
+  - Technologies used in addition to general list:
+    - PostgreSQL instead of H2
+
 - [Application with Thymeleaf support](https://github.com/jeserkin/spring-boot-webappbase/tree/thymeleaf)
   - Technologies used in addition to general list:
     - Thymeleaf
